@@ -15,9 +15,9 @@ namespace MVC.Controllers
         }
         
         //method for an game
-        public string AnGame()
+        public string AnGame(int id)
         {
-            return "An Game Page";
+            return "Game: Id = " + id.ToString();
         }
     }
 }
