@@ -18,7 +18,7 @@ namespace MVC.Tests.Controllers
 
             ViewResult result = controller.Index();
             // Assert
-            Assert.AreEqual("Welcome to the shop. Kindly spend all your money!",
+            Assert.AreEqual("Welcome to the game reviews! Please leave a review!",
            controller.ViewBag.WelcomeMessage);
         }
 
