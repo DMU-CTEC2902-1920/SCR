@@ -20,6 +20,9 @@ namespace MVC.Controllers
         public string AnGame(int Id, string Genre, string Platform,  string Price)
         {
             //return "Game: Id = " + id.ToString();
+
+            //To try out the code below, use his url
+            //localhost:3552/Game/AnGame?Id=1&Genre=Action&Platform=Pc&Price=12
             return String.Format("Game ID = {0}, Genre={1}, Platform={2}, Price={3}", Id, Genre, Platform, Price);
         }
     }
