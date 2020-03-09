@@ -34,28 +34,29 @@ namespace MVC.Controllers
         //that acceps some data from a HTTP GET request
         public ViewResult AnGame()
         {
-            AnGameModel GameModel = new AnGameModel();
-            GameModel.Id = 1;
-            GameModel.Name = "Minecraft";
-            GameModel.Genre = "Action";
-            GameModel.Platform = "PC";
-            GameModel.Price = "£12";
-            GameModel.Description = "Test Description";
+            if (_model == null)
+            {
+                _model.Id = 1;
+                _model.Name = "Minecraft";
+                _model.Genre = "Action";
+                _model.Platform = "PC";
+                _model.Price = "£12";
+                _model.Description = "Test Description";
+            }
 
-
-            if (GameModel.Platform == "PC")
+            if (_model.Platform == "PC")
             {
                 ViewBag.SubTitle = "Available On PC";
             }
-            else if (GameModel.Platform == "PlayStation")
+            else if (_model.Platform == "PlayStation")
             {
                 ViewBag.SubTitle = "Available On PlayStation";
             }
-            else if (GameModel.Platform == "Xbox")
+            else if (_model.Platform == "Xbox")
             {
                 ViewBag.SubTitle = "Available On Xbox";
             }
-            else if (GameModel.Platform == "Nintendo Switch")
+            else if (_model.Platform == "Nintendo Switch")
             {
                 ViewBag.SubTitle = "Available On Nintendo Switch";
             }
@@ -63,7 +64,7 @@ namespace MVC.Controllers
             {
                 ViewBag.SubTitle = "Platform Unknown";
             }
-            return View(GameModel);
+            return View(_model);
         }
     }
 }

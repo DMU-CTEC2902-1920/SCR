@@ -61,7 +61,7 @@ namespace MVC.Tests.Controllers
             model.Id = 1;
             model.Name = "Rust";
             model.Genre = "Action";
-            model.Platform = "PC";
+            model.Platform = "PlayStation";
             model.Price = "£31";
             model.Description = "Test Description 2";
 
@@ -72,7 +72,7 @@ namespace MVC.Tests.Controllers
             
             //Act
             ViewResult result = controller.AnGame();
-            Assert.AreEqual("Available On PC", result.ViewBag.SubTitle);
+            Assert.AreEqual("Available On PlayStation", result.ViewBag.SubTitle);
         }
     }
 }
