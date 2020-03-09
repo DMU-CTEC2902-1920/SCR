@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MVC.Controllers;
+using MVC.Models;
 
 namespace MVC.Tests.Controllers
 {
@@ -22,6 +23,16 @@ namespace MVC.Tests.Controllers
            controller.ViewBag.WelcomeMessage);
         }
 
-     
+        public void GameName()
+        {
+            // Arrange
+            GameController controller = new GameController();
+            // Act
+            ViewResult viewResult = controller.AnGame();
+            AnGameModel result = viewResult.Model as AnGameModel;
+            // Assert
+            Assert.AreEqual("Minecraft", result.Name);
+        }
+
     }
 }

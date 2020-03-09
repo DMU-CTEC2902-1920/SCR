@@ -26,6 +26,7 @@ namespace MVC.Controllers
         {
             AnGameModel GameModel = new AnGameModel();
             GameModel.Id = 1;
+            GameModel.Name = "Minecraft";
             GameModel.Genre = "Action";
             GameModel.Platform = "PC";
             GameModel.Price = "£12";
