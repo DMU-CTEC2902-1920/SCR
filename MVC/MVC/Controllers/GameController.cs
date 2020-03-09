@@ -14,6 +14,7 @@ namespace MVC.Controllers
             //adding data to the viewbag
             ViewBag.Title = "The Games";
             ViewBag.WelcomeMessage = "Welcome to the game reviews! Please leave a review!";
+
             return View();
         }
         
