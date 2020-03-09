@@ -30,6 +30,7 @@ namespace MVC.Controllers
             GameModel.Genre = "Action";
             GameModel.Platform = "PC";
             GameModel.Price = "£12";
+            GameModel.Description = "Test Description";
 
 
             if (GameModel.Platform == "PC")
