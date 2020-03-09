@@ -9,9 +9,11 @@ namespace MVC.Controllers
     public class GameController : Controller
     {
         // GET: Game
-        public string Index()
+        public ViewResult Index()
         {
-            return "Game Index";
+            ViewBag.Title = "The Games";
+            ViewBag.WelcomeMessage = "Welcome to the game reviews! Please leave a review!";
+            return View();
         }
         
         //method for an game
@@ -22,7 +24,8 @@ namespace MVC.Controllers
             //return "Game: Id = " + id.ToString();
 
             //To try out the code below, use his url
-            //localhost:3552/Game/AnGame?Id=1&Genre=Action&Platform=Pc&Price=12
+            //localhost:3552/Game/AnGame?Id=1&Genre=Action&Platform=Pc&Price=12
+
             return String.Format("Game ID = {0}, Genre={1}, Platform={2}, Price={3}", Id, Genre, Platform, Price);
         }
     }
