@@ -68,9 +68,11 @@ namespace MVC.Tests.Controllers
 
             //inject the contoller's dependency on the model so we can test it 
             GameController controller = new GameController(model);
+            
+            
             //Act
             ViewResult result = controller.AnGame();
-            Assert.AreEqual("Available On PC", result.View.SubTitle);
+            Assert.AreEqual("Available On PC", result.ViewBag.SubTitle);
         }
     }
 }
