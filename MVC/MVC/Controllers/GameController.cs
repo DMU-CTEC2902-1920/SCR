@@ -33,9 +33,13 @@ namespace MVC.Controllers
         //this is a simple example of an action method
         //that acceps some data from a HTTP GET request
         public ViewResult AnGame()
+
+        //localhost:3552/Game/AnGame?Id=1&Name=Minecraft&Genre=Action&Platform=PC&Price=12&Descripion=Test
+
         {
             if (_model == null)
             {
+                _model = new AnGameModel();
                 _model.Id = 1;
                 _model.Name = "Minecraft";
                 _model.Genre = "Action";
@@ -43,6 +47,8 @@ namespace MVC.Controllers
                 _model.Price = "£12";
                 _model.Description = "Test Description";
             }
+
+            ViewBag.Title = _model.Name;
 
             if (_model.Platform == "PC")
             {

@@ -25,25 +25,51 @@ namespace MVC.Tests.Controllers
         [TestMethod]
         public void GameName()
         {
-            // Arrange
-            GameController controller = new GameController();
-            // Act
-            ViewResult viewResult = controller.AnGame();
-            AnGameModel result = viewResult.Model as AnGameModel;
-            // Assert
-            Assert.AreEqual("Minecraft", result.Name);
+            //arange
+
+            AnGameModel model = new AnGameModel();
+            model.Id = 1;
+            model.Name = "Minecraft";
+            model.Genre = "Action";
+            model.Platform = "Xbox";
+            model.Price = "£42";
+            model.Description = "Test Description 1";
+
+
+            //inject the contoller's dependency on the model so we can test it 
+            GameController controller = new GameController(model);
+
+
+            //Act
+            ViewResult result = controller.AnGame();
+            //Assert
+            Assert.AreEqual("Minecraft", result.ViewBag.Title);
         }
 
+        
         [TestMethod]
         public void GameIsForPC()
         {
-            // Arrange
-            GameController controller = new GameController();
-            // Act
-            ViewResult viewResult = controller.AnGame();
-            AnGameModel result = viewResult.Model as AnGameModel;
-            // Assert
-            Assert.AreEqual("PC", result.Platform);
+
+            //arange
+
+            AnGameModel model = new AnGameModel();
+            model.Id = 2;
+            model.Name = "Rust";
+            model.Genre = "Action";
+            model.Platform = "PC";
+            model.Price = "£31";
+            model.Description = "Test Description 2";
+
+
+            //inject the contoller's dependency on the model so we can test it 
+            GameController controller = new GameController(model);
+
+
+            //Act
+            ViewResult result = controller.AnGame();
+            //Assert
+            Assert.AreEqual("Available On PC", result.ViewBag.SubTitle);
         }
 
 
@@ -58,12 +84,12 @@ namespace MVC.Tests.Controllers
             //arange
 
             AnGameModel model = new AnGameModel();
-            model.Id = 1;
-            model.Name = "Rust";
+            model.Id = 3;
+            model.Name = "Rainbow Six: Seige";
             model.Genre = "Action";
             model.Platform = "PlayStation";
-            model.Price = "£31";
-            model.Description = "Test Description 2";
+            model.Price = "£21";
+            model.Description = "Test Description 3";
 
 
             //inject the contoller's dependency on the model so we can test it 
