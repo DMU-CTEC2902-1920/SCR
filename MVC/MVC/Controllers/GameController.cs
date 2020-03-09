@@ -9,9 +9,15 @@ namespace MVC.Controllers
     public class GameController : Controller
     {
         // GET: Game
-        public ActionResult Index()
+        public string Index()
         {
-            return View();
+            return "Game Index";
+        }
+        
+        //method for an game
+        public string AnGame()
+        {
+            return "An Game Page";
         }
     }
 }
