@@ -15,9 +15,12 @@ namespace MVC.Controllers
         }
         
         //method for an game
-        public string AnGame(int id)
+        //this is a simple example of an action method
+        //that acceps some data from a HTTP GET request
+        public string AnGame(int Id, string Genre, string Platform,  string Price)
         {
-            return "Game: Id = " + id.ToString();
+            //return "Game: Id = " + id.ToString();
+            return String.Format("Game ID = {0}, Genre={1}, Platform={2}, Price={3}", Id, Genre, Platform, Price);
         }
     }
 }
