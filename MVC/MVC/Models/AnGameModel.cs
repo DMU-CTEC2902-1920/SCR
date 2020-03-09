@@ -5,13 +5,15 @@ using System.Web;
 
 namespace MVC.Models
 {
+    
     public class AnGameModel
     {
-         public int Id { get; set; }
+        public int Id { get; set; }
         public string Genre { get; set; }
         public string Platform { get; set; }
         public string Price { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }
+   
 }

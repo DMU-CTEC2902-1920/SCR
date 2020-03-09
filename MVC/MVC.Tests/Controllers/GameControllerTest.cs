@@ -46,5 +46,31 @@ namespace MVC.Tests.Controllers
             Assert.AreEqual("PC", result.Platform);
         }
 
+
+        //testing  with dependancy injection
+
+
+
+        [TestMethod]
+        public void GameIsForPlayStation()
+        {
+
+            //arange
+
+            AnGameModel model = new AnGameModel();
+            model.Id = 1;
+            model.Name = "Rust";
+            model.Genre = "Action";
+            model.Platform = "PC";
+            model.Price = "£31";
+            model.Description = "Test Description 2";
+
+
+            //inject the contoller's dependency on the model so we can test it 
+            GameController controller = new GameController(model);
+            //Act
+            ViewResult result = controller.AnGame();
+            Assert.AreEqual("Available On PC", result.View.SubTitle);
+        }
     }
 }

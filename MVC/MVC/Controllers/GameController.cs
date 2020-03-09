@@ -9,6 +9,16 @@ namespace MVC.Controllers
 {
     public class GameController : Controller
     {
+
+        private AnGameModel _model;
+        public GameController() { }
+
+        public GameController(AnGameModel model)
+        {
+            _model = model;
+        }
+
+
         // GET: Game
         public ViewResult Index()
         {
