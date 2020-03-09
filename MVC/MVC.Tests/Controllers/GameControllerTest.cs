@@ -34,7 +34,17 @@ namespace MVC.Tests.Controllers
             Assert.AreEqual("Minecraft", result.Name);
         }
 
-
+        [TestMethod]
+        public void GameIsForPC()
+        {
+            // Arrange
+            GameController controller = new GameController();
+            // Act
+            ViewResult viewResult = controller.AnGame();
+            AnGameModel result = viewResult.Model as AnGameModel;
+            // Assert
+            Assert.AreEqual("PC", result.Platform);
+        }
 
     }
 }
