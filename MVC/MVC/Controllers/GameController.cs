@@ -18,7 +18,7 @@ namespace MVC.Controllers
 
             return View();
         }
-        
+
         //method for an game
         //this is a simple example of an action method
         //that acceps some data from a HTTP GET request
@@ -32,11 +32,11 @@ namespace MVC.Controllers
             GameModel.Price = "£12";
 
 
-            if(GameModel.Platform == "PC")
+            if (GameModel.Platform == "PC")
             {
                 ViewBag.SubTitle = "Available On PC";
             }
-            else if(GameModel.Platform == "PlayStation")
+            else if (GameModel.Platform == "PlayStation")
             {
                 ViewBag.SubTitle = "Available On PlayStation";
             }
@@ -53,5 +53,6 @@ namespace MVC.Controllers
                 ViewBag.SubTitle = "Platform Unknown";
             }
             return View(GameModel);
+        }
     }
 }

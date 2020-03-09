@@ -22,7 +22,7 @@ namespace MVC.Tests.Controllers
             Assert.AreEqual("Welcome to the game reviews! Please leave a review!",
            controller.ViewBag.WelcomeMessage);
         }
-
+        [TestMethod]
         public void GameName()
         {
             // Arrange
@@ -33,6 +33,8 @@ namespace MVC.Tests.Controllers
             // Assert
             Assert.AreEqual("Minecraft", result.Name);
         }
+
+
 
     }
 }
