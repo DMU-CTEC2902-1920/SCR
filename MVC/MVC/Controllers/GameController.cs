@@ -31,6 +31,27 @@ namespace MVC.Controllers
             GameModel.Platform = "PC";
             GameModel.Price = "£12";
 
+
+            if(GameModel.Platform == "PC")
+            {
+                ViewBag.SubTitle = "Available On PC";
+            }
+            else if(GameModel.Platform == "PlayStation")
+            {
+                ViewBag.SubTitle = "Available On PlayStation";
+            }
+            else if (GameModel.Platform == "Xbox")
+            {
+                ViewBag.SubTitle = "Available On Xbox";
+            }
+            else if (GameModel.Platform == "Nintendo Switch")
+            {
+                ViewBag.SubTitle = "Available On Nintendo Switch";
+            }
+            else
+            {
+                ViewBag.SubTitle = "Platform Unknown";
+            }
             return View(GameModel);
     }
 }
