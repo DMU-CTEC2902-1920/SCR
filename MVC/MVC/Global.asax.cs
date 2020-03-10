@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using MVC.Models;
 
 namespace MVC
 {
@@ -12,6 +14,7 @@ namespace MVC
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(new GameDataIntialiser());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
