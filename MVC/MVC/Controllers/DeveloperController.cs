@@ -44,7 +44,10 @@ namespace MVC.Controllers
         public ActionResult Details(int? id)
         {
 
-           
+            if (id == null) return new HttpNotFoundResult();
+            Developer selectedDeveloper = _developers.First(p => p.DeveloperId == id);
+            if (selectedDeveloper == null) return new HttpNotFoundResult();
+            return View(selectedDeveloper);
 
         }
     }
