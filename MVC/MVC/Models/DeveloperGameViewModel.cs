@@ -7,5 +7,8 @@ namespace MVC.Models
 {
     public class DeveloperGameViewModel
     {
+        public AnGameModel AnGameModel { get; set; }
+        public Developer Developer { get; set; }
+       
     }
 }
