@@ -19,21 +19,22 @@ namespace MVCGamesReviewWebsite.Controllers
         {
             var anGames = db.AnGames.Include(a => a.Genre);
             return View(anGames.ToList());
+
+
+
         }
 
         // GET: AnGames/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            AnGame anGame = db.AnGames.Find(id);
-            if (anGame == null)
-            {
-                return HttpNotFound();
-            }
-            return View(anGame);
+            var anGames = db.AnGames;
+            if (id == null) return new HttpNotFoundResult();
+
+
+
+            AnGame selectedAnGame = anGames.First(prop => prop.Id == id);
+            if(selectedAnGame == null) return new HttpNotFoundResult();
+            return View(selectedAnGame);
         }
 
         // GET: AnGames/Create
