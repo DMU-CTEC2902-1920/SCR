@@ -24,16 +24,21 @@ namespace MVC.Models
             AnGameModel game1 = new AnGameModel();
             game1.Id = 1;
             game1.GenreId = 1;
+            game1.Genre = gen1;
+            game1.Platform = "PC";
+            game1.Price = "£12";
             game1.Name = "Minecraft";
             game1.Description = "Fun for all ages";
-            game1.Genre = gen1;
+           
             context.AnGameModels.Add(game1);
             AnGameModel game2 = new AnGameModel();
             game2.Id = 1;
             game2.GenreId = 1;
+            game2.Genre = gen1;
+            game2.Platform = "PC";
+            game2.Price = "£12";
             game2.Name = "Rust";
             game2.Description = "Infuriating!";
-            game2.Genre = gen2;
             context.AnGameModels.Add(game2);
 
             base.Seed(context);

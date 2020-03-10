@@ -14,6 +14,29 @@ namespace MVC.Controllers
     {
         private AnGameContext db = new AnGameContext();
 
+        private List<AnGameModel> _AnGameModels = new List<AnGameModel>()
+        {
+
+            new AnGameModel {Id = 1,
+                            Name = "Minecraft",
+                            Platform = "PC",
+                            Description = "Fun for all ages",
+                            Price = "£12"
+                            },
+            new AnGameModel {Id = 1,
+                            Name = "Minecraft",
+                            Platform = "PC",
+                            Description = "Fun for all ages",
+                            Price = "£12"
+                            },
+            new AnGameModel {Id = 1,
+                            Name = "Minecraft",
+                            Platform = "PC",
+                            Description = "Fun for all ages",
+                            Price = "£12"
+                            }
+            };
+
         // GET: AnGameModels
         public ActionResult Index()
         {
