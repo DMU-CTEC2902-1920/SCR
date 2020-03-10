@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
 namespace MVC.Models
 {
     
     public class AnGameModel
     {
-        public int Id { get; set; }
-        public string Genre { get; set; }
-        public string Platform { get; set; }
-        public string Price { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public virtual int Id { get; set; }
+        public virtual Genre Genre { get; set; }
+        public virtual string Platform { get; set; }
+        public virtual string Price { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Description { get; set; }
     }
    
 }
