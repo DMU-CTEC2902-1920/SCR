@@ -251,6 +251,7 @@
     <Content Include="Views\AnGameModels\Edit.cshtml" />
     <Content Include="Views\AnGameModels\Index.cshtml" />
     <Content Include="Views\Developer\Details.cshtml" />
+    <Content Include="Views\Developer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

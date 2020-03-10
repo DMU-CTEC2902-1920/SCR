@@ -37,7 +37,7 @@ namespace MVC.Controllers
         // GET: Developer
         public ActionResult Index()
         {
-            return View();
+            return View(_developers);
         }
 
         // GET: Details/id
