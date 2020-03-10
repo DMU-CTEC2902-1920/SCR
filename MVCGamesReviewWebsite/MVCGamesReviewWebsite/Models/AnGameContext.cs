@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-
+using MVCGamesReviewWebsite.Models;
 namespace MVCGamesReviewWebsite.Models
 {
     public class AnGameContext : DbContext
@@ -19,8 +19,7 @@ namespace MVCGamesReviewWebsite.Models
         {
         }
 
-        public System.Data.Entity.DbSet<MVCGamesReviewWebsite.Models.AnGame> AnGames { get; set; }
-
-        public System.Data.Entity.DbSet<MVCGamesReviewWebsite.Models.Genre> Genres { get; set; }
+        public DbSet<AnGame> AnGames { get; set; }
+        public DbSet<Genre> Genres { get; set; }
     }
 }
