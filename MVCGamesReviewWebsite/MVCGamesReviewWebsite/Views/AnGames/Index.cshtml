@@ -10,7 +10,14 @@
 <ul>
     @foreach (var game in @Model)
     {
-        <li>@game.Name</li>
+     <li>
+         <a href="~/AnGames/Details/@game.Id">@game.Name</a>
+         @if (game.Price < 100)
+         {
+             <text>Very Cheap!</text>
+         }
+
+     </li>
     }
 </ul>
 </body>

@@ -30,10 +30,10 @@ namespace MVCGamesReviewWebsite.Models
             game1.Description = "Lots of fun";
             game1.Genre = gen1;
             game1.Platform = "PC";
-            game1.Price= 100m;
+            game1.Price= 10m;
             context.AnGames.Add(game1);
             AnGame game2 = new AnGame();
-            game2.Id = 1;
+            game2.Id = 2;
             game2.GenreId = 1;
             game2.Name = "Rust";
             game2.Description = "Infuriating!";
