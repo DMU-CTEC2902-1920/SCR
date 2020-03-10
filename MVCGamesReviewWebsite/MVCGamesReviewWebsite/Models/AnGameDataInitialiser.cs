@@ -30,6 +30,7 @@ namespace MVCGamesReviewWebsite.Models
             game1.Description = "Lots of fun";
             game1.Genre = gen1;
             game1.Platform = "PC";
+            game1.Price= 100m;
             context.AnGames.Add(game1);
             AnGame game2 = new AnGame();
             game2.Id = 1;
@@ -38,6 +39,7 @@ namespace MVCGamesReviewWebsite.Models
             game2.Description = "Infuriating!";
             game2.Genre = gen2;
             game2.Platform = "PC";
+            game2.Price = 200m;
             context.AnGames.Add(game2);
 
             base.Seed(context);

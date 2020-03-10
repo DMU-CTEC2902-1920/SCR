@@ -14,6 +14,6 @@ namespace MVCGamesReviewWebsite.Models
 
         public virtual Genre Genre { get; set; }
         public virtual string Platform { get; set; }
-
+        public virtual decimal Price { get; set; }
     }
 }
