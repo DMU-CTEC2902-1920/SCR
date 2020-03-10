@@ -178,6 +178,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnGameContext.cs" />
     <Compile Include="Models\AnGameModel.cs" />
+    <Compile Include="Models\GameDataIntialiser.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

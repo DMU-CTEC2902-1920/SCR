@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using MVC.Models;
 
 namespace MVC.Models
 {
@@ -19,6 +20,8 @@ namespace MVC.Models
         {
         }
 
-        public System.Data.Entity.DbSet<MVC.Models.AnGameModel> AnGameModels { get; set; }
+        public DbSet<AnGameModel> AnGameModel { get; set; }
+        public DbSet<Genre> Genre { get; set; }
+
     }
 }
