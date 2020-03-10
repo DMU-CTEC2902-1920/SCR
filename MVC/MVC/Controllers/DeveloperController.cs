@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Collections.Generic;
 using MVC.Models;
 using System.Linq;
+using System.Diagnostics;
 
 namespace MVC.Controllers
 {
@@ -58,6 +59,27 @@ namespace MVC.Controllers
             Developer selectedDeveloper = _developers.First(p => p.DeveloperId == id);
             if (selectedDeveloper == null) return new HttpNotFoundResult();
             return View(selectedDeveloper);
+        }
+
+
+        // POST: Edit
+        [HttpPost]
+        public ActionResult Edit(Developer developer)
+        {
+
+            if(ModelState.IsValid)
+            {
+                Debug.WriteLine(developer.Name);
+                Debug.WriteLine(developer.Description);
+                Debug.WriteLine(developer.Platform);
+                Debug.WriteLine(developer.Rating);
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(developer);
+            }
         }
     }
 }
