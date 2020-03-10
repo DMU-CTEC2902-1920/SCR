@@ -180,6 +180,7 @@
     <Compile Include="Models\AnGameContext.cs" />
     <Compile Include="Models\AnGameModel.cs" />
     <Compile Include="Models\Developer.cs" />
+    <Compile Include="Models\DeveloperGameViewModel.cs" />
     <Compile Include="Models\GameDataIntialiser.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
