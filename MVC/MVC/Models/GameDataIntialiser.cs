@@ -27,14 +27,14 @@ namespace MVC.Models
             game1.Name = "Minecraft";
             game1.Description = "Fun for all ages";
             game1.Genre = gen1;
-            context.AnGameModel.Add(game1);
+            context.AnGameModels.Add(game1);
             AnGameModel game2 = new AnGameModel();
             game2.GameId = 1;
             game2.GenreId = 1;
             game2.Name = "Rust";
             game2.Description = "Infuriating!";
             game2.Genre = gen2;
-            context.AnGameModel.Add(game2);
+            context.AnGameModels.Add(game2);
 
             base.Seed(context);
 

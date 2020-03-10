@@ -20,7 +20,7 @@ namespace MVC.Models
         {
         }
 
-        public DbSet<AnGameModel> AnGameModel { get; set; }
+        public DbSet<AnGameModel> AnGameModels { get; set; }
         public DbSet<Genre> Genres { get; set; }
 
     }

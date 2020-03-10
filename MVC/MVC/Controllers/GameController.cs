@@ -37,16 +37,16 @@ namespace MVC.Controllers
         //localhost:3552/Game/AnGame?Id=1&Name=Minecraft&Genre=Action&Platform=PC&Price=12&Descripion=Test
 
         {
-            if (_model == null)
-            {
-                _model = new AnGameModel();
-                _model.Id = 1;
-                _model.Name = "Minecraft";
-                _model.Genre = "Action";
-                _model.Platform = "PC";
-                _model.Price = "£12";
-                _model.Description = "Test Description";
-            }
+            //if (_model == null)
+            //{
+            //    _model = new AnGameModel();
+            //    _model.Id = 1;
+            //    _model.Name = "Minecraft";
+            //    _model.Genre = "Action";
+            //    _model.Platform = "PC";
+            //    _model.Price = "£12";
+            //    _model.Description = "Test Description";
+            //}
 
             ViewBag.Title = _model.Name;
 
