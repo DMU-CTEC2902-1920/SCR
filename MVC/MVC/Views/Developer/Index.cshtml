@@ -1,8 +1,23 @@
-﻿@model MVC.Models.Developer
+﻿@model List<MVC.Models.Developer>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
+<body></body>
+    <h2>All Developers</h2>
+    <ul>
+        @foreach (var developer in @Model)
+        {
+        <li>
+            <a href="~/Developer/Details/@developer.DeveloperId">@developer.Name</a>
+
+            @if (developer.Rating > 8)
+            {
+                <text>REALLY GOOD DEVELOPER!</text>
+
+            }
+        </li>
+        }
+    </ul>

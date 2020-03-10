@@ -19,7 +19,7 @@ namespace MVC.Controllers
                 Name = "John",
                 Description = "Upcoming developer!",
                 Platform = "PC",
-                Rating = 0.1m},
+                Rating = 8.1m},
             new Developer
             {   DeveloperId = 2,
                 Name = "Steve",
@@ -50,5 +50,7 @@ namespace MVC.Controllers
             return View(selectedDeveloper);
 
         }
+
+
     }
 }
