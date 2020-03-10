@@ -51,6 +51,10 @@ namespace MVC.Controllers
 
         }
 
+        // GET: Edit/id
+        public ActionResult Edit(int? id)
+        {
 
+        }
     }
 }
