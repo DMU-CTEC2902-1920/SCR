@@ -54,7 +54,10 @@ namespace MVC.Controllers
         // GET: Edit/id
         public ActionResult Edit(int? id)
         {
-
+            if (id == null) return new HttpNotFoundResult();
+            Developer selectedDeveloper = _developers.First(p => p.DeveloperId == id);
+            if (selectedDeveloper == null) return new HttpNotFoundResult();
+            return View(selectedDeveloper);
         }
     }
 }
