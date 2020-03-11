@@ -29,12 +29,28 @@ namespace MVCGamesReviewWebsite.Controllers
         {
             var anGames = db.AnGames;
             if (id == null) return new HttpNotFoundResult();
-
-
-
             AnGame selectedAnGame = anGames.First(prop => prop.Id == id);
-            if(selectedAnGame == null) return new HttpNotFoundResult();
-            return View(selectedAnGame);
+            if (selectedAnGame == null) return new HttpNotFoundResult();
+            Developer developer = new Developer
+            {
+
+                Id = 1,
+                Name = "Stewart",
+                Description = "not a good programmer"
+            };
+
+            DeveloperAnGameViewModel viewModel = new DeveloperAnGameViewModel
+            {
+                Developer = developer,
+                AnGame = selectedAnGame
+            };
+
+            
+           
+            
+            //return View(selectedAnGame);
+            //this is used for the combined view of game and developer
+            return View(viewModel);
         }
 
         // GET: AnGames/Create

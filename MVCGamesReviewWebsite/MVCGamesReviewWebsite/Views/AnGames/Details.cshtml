@@ -1,11 +1,16 @@
-﻿@model MVCGamesReviewWebsite.Models.AnGame
+﻿@model MVCGamesReviewWebsite.Models.DeveloperAnGameViewModel
 
 @{
     ViewBag.Title = "Details";
 }
+<h2>Developer Info:</h2>
+<p><strong>First Name:</strong> @Model.Developer.Name</p>
+<p><strong>Description:</strong> @Model.Developer.Description</p>
+<h2>An Game info:</h2>
+<h2>@Model.AnGame.Name</h2>
+<h3>@Model.AnGame.Platform</h3>
+<p>@Model.AnGame.Description</p>
+<p><strong>@Model.AnGame.Genre</strong></p>
+<p><strong>@Model.AnGame.Price</strong></p>
 
-<h2>@Model.Name</h2>
-<h3>@Model.Platform</h3>
-<p>@Model.Description</p>
-<p><strong>@Model.Genre</strong></p>
-<p><strong>@Model.Price</strong></p>
+
