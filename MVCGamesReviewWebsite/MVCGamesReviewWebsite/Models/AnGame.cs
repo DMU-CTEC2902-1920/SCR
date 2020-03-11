@@ -11,7 +11,10 @@ namespace MVCGamesReviewWebsite.Models
         public virtual int Id { get; set; }
        
         public virtual int GenreId { get; set; }
-        [Required]
+
+      
+
+        [Required]  
         public virtual string Name { get; set; }
         [StringLength(100)]
         public virtual string Description { get; set; }

@@ -34,7 +34,7 @@ namespace MVCGamesReviewWebsite.Controllers
             Developer developer = new Developer
             {
 
-                ID = 1,
+                DeveloperID = 1,
                 Name = "Stewart",
                 Description = "not a good programmer"
             };
