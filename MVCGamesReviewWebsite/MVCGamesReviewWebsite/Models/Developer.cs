@@ -10,9 +10,9 @@ namespace MVCGamesReviewWebsite.Models
     {
 
         public virtual int DeveloperID { get; set; }
-        public virtual int Id { get; set; }
+        //public virtual List<AnGame> WorkedOnGames { get; set; }
 
-
+     
         public virtual string Name { get; set; }
         
         public virtual string Description { get; set; }

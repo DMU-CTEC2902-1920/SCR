@@ -3,15 +3,20 @@
 @{
     ViewBag.Title = "Details";
 }
-<h2>Developer Info:</h2>
-<p><strong>First Name:</strong> @Model.Developer.Name</p>
-<p><strong>Description:</strong> @Model.Developer.Description</p>
-<h2>An Game info:</h2>
+
+<ul>
+    <p><strong>@Model.AnGame.DevelopedBy.Name</strong></p>
+</ul>
+
+
+
 <h2>@Model.AnGame.Name</h2>
+
 <h3>@Model.AnGame.Platform</h3>
 <p>@Model.AnGame.Description</p>
 <p><strong>@Model.AnGame.Genre.Name</strong></p>
 <p><strong>@Model.AnGame.Genre.Description</strong></p>
 <p><strong>@Model.AnGame.Price</strong></p>
+
 
 

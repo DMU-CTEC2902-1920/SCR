@@ -12,7 +12,7 @@ namespace MVCGamesReviewWebsite.Models
        
         public virtual int GenreId { get; set; }
 
-      
+        public virtual Developer DevelopedBy { get; set; }
 
         [Required]  
         public virtual string Name { get; set; }
