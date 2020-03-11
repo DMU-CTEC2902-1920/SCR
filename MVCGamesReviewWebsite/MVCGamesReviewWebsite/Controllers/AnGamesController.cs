@@ -43,7 +43,7 @@ namespace MVCGamesReviewWebsite.Controllers
            
             
             //return View(selectedAnGame);
-            //this is used for the combined view of game and developer
+            //this is used for the combined view of game and developerR
             return View(viewModel);
         }
 
