@@ -4,13 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<ul>
-    <p><strong>@Model.AnGame.DevelopedBy.Name</strong></p>
-</ul>
 
 
 
-<h2>@Model.AnGame.Name</h2>
+<h1> @Model.AnGame.Name</h1>
+
+<h3><strong><a href="~/Developers/Details/@Model.AnGame.DevelopedBy.DeveloperID">Made by @Model.AnGame.DevelopedBy.Name</strong></h3>
 
 <h3>@Model.AnGame.Platform</h3>
 <p>@Model.AnGame.Description</p>
