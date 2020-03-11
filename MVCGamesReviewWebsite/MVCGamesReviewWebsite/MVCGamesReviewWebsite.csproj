@@ -181,6 +181,7 @@
     <Compile Include="Models\AnGameDataInitialiser.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Models\DeveloperContext.cs" />
+    <Compile Include="Models\DeveloperDataInitialiser.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
