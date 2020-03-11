@@ -10,9 +10,9 @@ namespace MVCGamesReviewWebsite.Models
     {
 
         public virtual int Id { get; set; }
-        [Required]
+       
         public virtual string Name { get; set; }
-        [StringLength(100)]
+        
         public virtual string Description { get; set; }
 
     }

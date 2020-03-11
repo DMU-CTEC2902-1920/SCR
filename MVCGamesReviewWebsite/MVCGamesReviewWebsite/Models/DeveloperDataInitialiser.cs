@@ -13,14 +13,19 @@ namespace MVCGamesReviewWebsite.Models
         protected override void Seed(DeveloperContext context)
         {
 
-            Developer del1 = new Developer();
-            del1.Id = 1;
-            del1.Name = "George";
-            del1.Description = "Great Developer";
-            Developer del2 = new Developer();
-            del1.Id = 2;
-            del1.Name = "Micheal";
-            del1.Description = "Good  Developer";
+            Developer dev1 = new Developer();
+            dev1.Id = 1;
+            dev1.Name = "George";
+            dev1.Description = "Great Developer";
+            context.Developers.Add(dev1);
+
+
+            Developer dev2 = new Developer();
+            dev2.Id = 2;
+            dev2.Name = "Micheal";
+            dev2.Description = "Good Developer";
+            context.Developers.Add(dev2);
+
             base.Seed(context);
 
     }   }
