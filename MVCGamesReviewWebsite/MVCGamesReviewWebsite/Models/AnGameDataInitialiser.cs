@@ -12,7 +12,7 @@ namespace MVCGamesReviewWebsite.Models
         protected override void Seed(AnGameContext context)
         {
 
-
+            //Genres
             Genre gen1 = new Genre();
             gen1.GenreId = 1;
             gen1.Name = "Action";
@@ -25,10 +25,10 @@ namespace MVCGamesReviewWebsite.Models
             gen2.Description = "Action paced fun!";
             context.Genres.Add(gen2);
 
+            //developers
             Developer dev1 = new Developer();
             dev1.DeveloperID = 1;
             dev1.Name = "George";
-           
             dev1.Description = "Great Developer";
             context.Developers.Add(dev1);
 
@@ -36,17 +36,17 @@ namespace MVCGamesReviewWebsite.Models
             Developer dev2 = new Developer();
             dev2.DeveloperID = 2;
             dev2.Name = "Micheal";
-            
             dev2.Description = "Good Developer";
             context.Developers.Add(dev2);
 
             Developer dev3 = new Developer();
             dev2.DeveloperID = 3;
             dev2.Name = "Steve";
-
             dev2.Description = "Ok Developer";
             context.Developers.Add(dev2);
 
+
+            //games
             AnGame game1 = new AnGame();
             game1.Id = 1;
             game1.GenreId = 1;
@@ -83,10 +83,24 @@ namespace MVCGamesReviewWebsite.Models
             game3.ImgSrc = "https://vignette.wikia.nocookie.net/gtawiki/images/7/76/CoverArt-GTAV.png/revision/latest?cb=20130826184215";
             context.AnGames.Add(game3);
 
+            //users
+            User us1 = new User();
+            us1.UserId = 1;
+            us1.Password = "Test";
+            us1.Email = "Test";
+            context.Users.Add(us1);
 
-           
+            //comments
+            Comment com1 = new Comment();
+            com1.CommentId = 1;
+            com1.Id = 1; //not sure if need this
+            com1.UserId = 1;
+            com1.Text = "Nice Game Dude";
+            com1.user = us1;
+            com1.AnGame = game1;
+            context.Comments.Add(com1)
 
-            
+
 
             base.Seed(context);
 

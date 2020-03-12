@@ -12,5 +12,7 @@ namespace MVCGamesReviewWebsite.Models
         public virtual string Password { get; set; }
 
         public virtual string Email { get; set; }
+
+        public virtual User user { get; set; }
     }
 }

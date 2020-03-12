@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using MVCGamesReviewWebsite.Models;
 
 namespace MVCGamesReviewWebsite.Models
 {
@@ -19,8 +21,8 @@ namespace MVCGamesReviewWebsite.Models
         {
         }
 
-        public System.Data.Entity.DbSet<MVCGamesReviewWebsite.Models.Comment> Comments { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
-        public System.Data.Entity.DbSet<MVCGamesReviewWebsite.Models.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

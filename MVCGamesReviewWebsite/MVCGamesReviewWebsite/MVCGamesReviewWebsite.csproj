@@ -182,6 +182,7 @@
     <Compile Include="Models\AnGameDataInitialiser.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentContext.cs" />
+    <Compile Include="Models\CommentDataInitaliser.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Models\DeveloperAnGameViewModel.cs" />
     <Compile Include="Models\DeveloperContext.cs" />
