@@ -21,8 +21,9 @@ namespace MVCGamesReviewWebsite.Models
 
         public virtual Genre Genre { get; set; }
         public virtual string Platform { get; set; }
+        
+        public string ImgSrc { get; set; }
         [Range(typeof(decimal), "0.01", "200.00")]
-
         public virtual decimal Price { get; set; }
     }
 }
