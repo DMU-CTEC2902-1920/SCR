@@ -179,6 +179,7 @@
     <Compile Include="Models\AnGame.cs" />
     <Compile Include="Models\AnGameContext.cs" />
     <Compile Include="Models\AnGameDataInitialiser.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Models\DeveloperAnGameViewModel.cs" />
     <Compile Include="Models\DeveloperContext.cs" />
@@ -186,6 +187,8 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Reply.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
