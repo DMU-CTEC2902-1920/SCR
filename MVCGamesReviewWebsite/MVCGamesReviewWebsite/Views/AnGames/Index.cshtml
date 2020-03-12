@@ -12,7 +12,7 @@
     {
     <li>
         <a href="~/AnGames/Details/@game.Id">@game.Name</a>
-        <img src="@Model.AnGame.ImgSrc" alt="@Model.AnGame.Genre.Name">
+        <img src="@game.ImgSrc" alt="@game.Genre.Name">
         @if (game.Price < 100)
         {
             <text>Very Cheap!</text>
