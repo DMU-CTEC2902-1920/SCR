@@ -98,7 +98,7 @@ namespace MVCGamesReviewWebsite.Models
             com1.Text = "Nice Game Dude";
             com1.user = us1;
             com1.AnGame = game1;
-            context.Comments.Add(com1)
+            context.Comments.Add(com1);
 
 
 
