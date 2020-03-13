@@ -14,14 +14,14 @@ namespace MVCGamesReviewWebsite.Models
         {
 
             Developer dev1 = new Developer();
-            dev1.ID = 1;
+            dev1.DeveloperID = 1;
             dev1.Name = "George";
             dev1.Description = "Great Developer";
             context.Developers.Add(dev1);
 
 
             Developer dev2 = new Developer();
-            dev2.ID = 2;
+            dev2.DeveloperID = 2;
             dev2.Name = "Micheal";
             dev2.Description = "Good Developer";
             context.Developers.Add(dev2);
