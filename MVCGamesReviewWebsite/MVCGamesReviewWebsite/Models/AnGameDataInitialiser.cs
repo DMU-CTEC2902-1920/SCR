@@ -83,23 +83,7 @@ namespace MVCGamesReviewWebsite.Models
             game3.ImgSrc = "https://vignette.wikia.nocookie.net/gtawiki/images/7/76/CoverArt-GTAV.png/revision/latest?cb=20130826184215";
             context.AnGames.Add(game3);
 
-            //users
-            User us1 = new User();
-            us1.UserId = 1;
-            us1.Password = "Test";
-            us1.Email = "Test";
-            context.Users.Add(us1);
-
-            //comments
-            Comment com1 = new Comment();
-            com1.CommentId = 1;
-            com1.Id = 1; //not sure if need this
-            com1.UserId = 1;
-            com1.Text = "Nice Game Dude";
-            com1.user = us1;
-            com1.AnGame = game1;
-            context.Comments.Add(com1);
-
+        
 
 
             base.Seed(context);

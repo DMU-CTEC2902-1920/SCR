@@ -12,7 +12,7 @@ namespace MVCGamesReviewWebsite.Models
        
         public virtual int GenreId { get; set; }
 
-        public virtual int CommentId { get; set; }
+ 
 
         public virtual Developer DevelopedBy { get; set; }
 
@@ -23,7 +23,6 @@ namespace MVCGamesReviewWebsite.Models
 
         public virtual Genre Genre { get; set; }
 
-        public virtual Comment Comment { get; set; }
         public virtual string Platform { get; set; }
         
         public string ImgSrc { get; set; }
