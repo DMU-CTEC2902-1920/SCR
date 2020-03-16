@@ -46,12 +46,30 @@ namespace MVCGamesReviewWebsite.Models
             context.Developers.Add(dev2);
 
 
+
+            //users
+            User user1 = new User();
+            user1.UserId = 1;
+            user1.Password = "Password1!";
+            user1.Email = "Test@Test.com";
+
+
+            //comment
+
+            Comment com1 = new Comment();
+            com1.CommentId = 1;
+            com1.CommentText = "Test Comment!";
+            com1.UserId = 1;
+            com1.User = user1;
+
+
             //games
             AnGame game1 = new AnGame();
             game1.Id = 1;
             game1.GenreId = 1;
             game1.Name = "Minecraft";
             game1.DevelopedBy = dev1;
+            game1.CommentedBy = com1;
             game1.Description = "Lots of fun";
             game1.Genre = gen1;
             game1.Platform = "PC";
@@ -64,6 +82,7 @@ namespace MVCGamesReviewWebsite.Models
             game2.GenreId = 1;
             game2.Name = "Rust";
             game2.DevelopedBy = dev2;
+            game1.CommentedBy = com1;
             game2.Description = "Infuriating!";
             game2.Genre = gen2;
             game2.Platform = "PC";
@@ -76,12 +95,18 @@ namespace MVCGamesReviewWebsite.Models
             game3.GenreId = 1;
             game3.Name = "GTA V";
             game3.DevelopedBy = dev3;
+            game1.CommentedBy = com1;
             game3.Description = "Infuriating!";
             game3.Genre = gen2;
             game3.Platform = "PC";
             game3.Price = 200m;
             game3.ImgSrc = "https://vignette.wikia.nocookie.net/gtawiki/images/7/76/CoverArt-GTAV.png/revision/latest?cb=20130826184215";
             context.AnGames.Add(game3);
+
+
+
+            
+
 
         
 
