@@ -13,7 +13,11 @@
 
 <h3>Platform:@Model.AnGame.Platform</h3>
 @*<p>Comments:<strong>@Model.AnGame.User.ReviwedOn.CommentText</strong></p>*@
-@foreach (User in List<User>)
+@foreach (var UseR in @Model.AnGame.ListUser)
+{
+    //displaying wrong review and only one review
+    <li> @UseR.ReviewedOn.ReviewText</li>
+}
 
 <img src="@Model.AnGame.ImgSrc" alt="@Model.AnGame.Genre.Name">
 <p>Description:@Model.AnGame.Description</p>
