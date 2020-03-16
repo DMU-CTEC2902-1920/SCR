@@ -5,14 +5,10 @@ using System.Web;
 
 namespace MVCGamesReviewWebsite.Models
 {
-    public class User
+    public class Comment
     {
+        public virtual int CommentId { get; set; }
         public virtual int UserId { get; set; }
-
-        public virtual string Password { get; set; }
-
-        public virtual string Email { get; set; }
-
-      
+        public virtual string CommentText { get; set; }
     }
 }
