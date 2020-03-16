@@ -45,6 +45,11 @@ namespace MVCGamesReviewWebsite.Models
             dev2.Description = "Ok Developer";
             context.Developers.Add(dev2);
 
+            //comment
+            Comment com1 = new Comment();
+            com1.CommentId = 1;
+            com1.CommentText = "hi";
+            context.Comments.Add(com1);
 
 
             //users
@@ -52,6 +57,8 @@ namespace MVCGamesReviewWebsite.Models
             user1.UserId = 1;
             user1.Password = "Test1!";
             user1.Email = "TestEmail@hotmail.com";
+            user1.CommentId = 1;
+            user1.CommentedOn = com1;
 
             context.Users.Add(user1);
 
