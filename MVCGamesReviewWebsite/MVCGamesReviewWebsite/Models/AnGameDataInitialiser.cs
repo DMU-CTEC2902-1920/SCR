@@ -46,10 +46,10 @@ namespace MVCGamesReviewWebsite.Models
             context.Developers.Add(dev2);
 
             //comment
-            Comment com1 = new Comment();
-            com1.CommentId = 1;
-            com1.CommentText = "hi";
-            context.Comments.Add(com1);
+            Review rev1 = new Review();
+            rev1.ReviewId = 1;
+            rev1.ReviewText = "hi";
+            context.Reviews.Add(rev1);
 
 
             //users
@@ -57,8 +57,8 @@ namespace MVCGamesReviewWebsite.Models
             user1.UserId = 1;
             user1.Password = "Test1!";
             user1.Email = "TestEmail@hotmail.com";
-            user1.CommentId = 1;
-            user1.CommentedOn = com1;
+            user1.ReviewId = 1;
+            user1.ReviewedOn = rev1;
 
             context.Users.Add(user1);
 
@@ -71,7 +71,7 @@ namespace MVCGamesReviewWebsite.Models
             game1.Id = 1;
             game1.GenreId = 1;
             game1.Name = "Minecraft";
-            game1.User = user1;
+            game1.User = new List<User> { user1, user1 };
             game1.DevelopedBy = dev1;
             game1.Description = "Lots of fun";
             game1.Genre = gen1;
@@ -84,7 +84,7 @@ namespace MVCGamesReviewWebsite.Models
             game2.Id = 2;
             game2.GenreId = 1;
             game2.Name = "Rust";
-            game1.User = user1;
+            game1.User = new List<User> { user1, user1 }; ;
             game2.DevelopedBy = dev2;
             game2.Description = "Infuriating!";
             game2.Genre = gen2;
@@ -97,7 +97,7 @@ namespace MVCGamesReviewWebsite.Models
             game3.Id = 2;
             game3.GenreId = 1;
             game3.Name = "GTA V";
-            game1.User = user1;
+            game1.User = new List<User> { user1, user1 };
             game3.DevelopedBy = dev3;
             game3.Description = "Infuriating!";
             game3.Genre = gen2;

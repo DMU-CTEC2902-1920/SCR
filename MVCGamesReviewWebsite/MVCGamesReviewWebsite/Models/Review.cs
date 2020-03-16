@@ -5,10 +5,10 @@ using System.Web;
 
 namespace MVCGamesReviewWebsite.Models
 {
-    public class Comment
+    public class Review
     {
-        public virtual int CommentId { get; set; }
-        public virtual string CommentText { get; set; }
+        public virtual int ReviewId { get; set; }
+        public virtual string ReviewText { get; set; }
 
     }
 }

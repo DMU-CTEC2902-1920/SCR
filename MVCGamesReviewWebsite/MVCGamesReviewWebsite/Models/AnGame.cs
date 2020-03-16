@@ -22,7 +22,7 @@ namespace MVCGamesReviewWebsite.Models
         public virtual string Description { get; set; }
 
         public virtual Genre Genre { get; set; }
-        public virtual User User { get; set; }
+        public virtual List<User> User { get; set; }
         public virtual string Platform { get; set; }
         
         public string ImgSrc { get; set; }
