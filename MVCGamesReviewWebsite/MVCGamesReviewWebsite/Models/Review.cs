@@ -10,5 +10,8 @@ namespace MVCGamesReviewWebsite.Models
         public virtual int ReviewId { get; set; }
         public virtual string ReviewText { get; set; }
 
+        public virtual int UserId { get; set; }
+
+        public virtual User ReviewedBy { get; set; }
     }
 }

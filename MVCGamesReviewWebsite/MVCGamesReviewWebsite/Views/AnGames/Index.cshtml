@@ -13,9 +13,9 @@
     <li>
         <a href="~/AnGames/Details/@game.Id">@game.Name</a>
         <img src="@game.ImgSrc" alt="@game.Genre.Name">
-        @if (game.Price < 100)
+        @if (game.ListReview.Count == 2)
         {
-            <text>Very Cheap!</text>
+            <text>Multiple Reviews!</text>
         }
 
     </li>
