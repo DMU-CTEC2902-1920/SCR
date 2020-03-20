@@ -45,12 +45,74 @@ namespace MVCGamesReviewWebsite.Models
             dev2.Description = "Ok Developer";
             context.Developers.Add(dev2);
 
+            //users
+            User user1 = new User();
+            user1.UserId = 1;
+            user1.Password = "Test1!";
+            user1.Email = "TestEmail@hotmail.com";
+            context.Users.Add(user1);
+
+            //users
+            User user2 = new User();
+            user2.UserId = 2;
+            user2.Password = "Test1!";
+            user2.Email = "TestEmail@hotmail.com";
+            context.Users.Add(user2);
+
+
+            //review
+            Review rev1 = new Review();
+            rev1.ReviewId = 1;
+            rev1.ReviewText = "hello";
+            rev1.ReviewedBy = user1;
+            rev1.UserId = 1;
+            context.Reviews.Add(rev1);
+
+            Review rev2 = new Review();
+            rev2.ReviewId = 2;
+            rev2.ReviewText = "test";
+            rev2.ReviewedBy = user2;
+            rev2.UserId = 2;
+            context.Reviews.Add(rev2);
+
+
+            Review rev3 = new Review();
+            rev3.ReviewId = 3;
+            rev3.ReviewText = "Howdy";
+            rev3.ReviewedBy = user1;
+            rev3.UserId = 1;
+            context.Reviews.Add(rev3);
+
+            Review rev4 = new Review();
+            rev4.ReviewId = 4;
+            rev4.ReviewText = "Hiya";
+            rev4.ReviewedBy = user2;
+            rev4.UserId = 2;
+            context.Reviews.Add(rev4);
+
+            Review rev5 = new Review();
+            rev5.ReviewId = 5;
+            rev5.ReviewText = "Hello There";
+            rev5.ReviewedBy = user1;
+            rev5.UserId = 1;
+            context.Reviews.Add(rev5);
+
+            Review rev6 = new Review();
+            rev6.ReviewId = 4;
+            rev6.ReviewText = "Yo";
+            rev6.ReviewedBy = user1;
+            rev6.UserId = 1;
+            context.Reviews.Add(rev6);
+
+
+
 
             //games
             AnGame game1 = new AnGame();
             game1.Id = 1;
             game1.GenreId = 1;
             game1.Name = "Minecraft";
+            game1.ListReview = new List<Review> {rev5, rev6};
             game1.DevelopedBy = dev1;
             game1.Description = "Lots of fun";
             game1.Genre = gen1;
@@ -63,18 +125,22 @@ namespace MVCGamesReviewWebsite.Models
             game2.Id = 2;
             game2.GenreId = 1;
             game2.Name = "Rust";
+            game2.ListReview = new List<Review> { rev3, rev4 };
             game2.DevelopedBy = dev2;
             game2.Description = "Infuriating!";
-            game2.Genre = gen2;
+            game2.Genre = gen1;
             game2.Platform = "PC";
             game2.Price = 200m;
             game2.ImgSrc = "https://steamcdn-a.akamaihd.net/steam/apps/252490/capsule_616x353.jpg?t=1572600442";
             context.AnGames.Add(game2);
 
+
+       
             AnGame game3 = new AnGame();
-            game3.Id = 2;
-            game3.GenreId = 1;
+            game3.Id = 3;
+            game3.GenreId = 2;
             game3.Name = "GTA V";
+            game3.ListReview = new List<Review> { rev1, rev2 };
             game3.DevelopedBy = dev3;
             game3.Description = "Infuriating!";
             game3.Genre = gen2;
@@ -82,6 +148,11 @@ namespace MVCGamesReviewWebsite.Models
             game3.Price = 200m;
             game3.ImgSrc = "https://vignette.wikia.nocookie.net/gtawiki/images/7/76/CoverArt-GTAV.png/revision/latest?cb=20130826184215";
             context.AnGames.Add(game3);
+
+
+
+            
+
 
         
 
