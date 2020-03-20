@@ -8,16 +8,19 @@
 
 
 <h1> @Model.AnGame.Name</h1>
-
-<h2><a href="~/Developers/Details/@Model.AnGame.DevelopedBy.DeveloperID">Made by @Model.AnGame.DevelopedBy.Name</h2>
-
-<h3>Platform:@Model.AnGame.Platform</h3>
-
 <img src="@Model.AnGame.ImgSrc" alt="@Model.AnGame.Genre.Name">
+<h2><a href="~/Developers/Details/@Model.AnGame.DevelopedBy.DeveloperID">Made by @Model.AnGame.DevelopedBy.Name</h2>
+<h3>Platform:@Model.AnGame.Platform</h3>
 <p>Description:@Model.AnGame.Description</p>
 <p>Genre:<strong>@Model.AnGame.Genre.Name</strong></p>
 <p>Genre:Description<strong>@Model.AnGame.Genre.Description</strong></p>
 <p>Price:£<strong>@Model.AnGame.Price</strong></p>
 
+<h3>Reviews:</h3>
+@foreach (var review in @Model.AnGame.ListReview)
+{
 
+    <li> @review.ReviewedBy.Email</li>
+    <li> @review.ReviewText</li>
+}
 
