@@ -12,12 +12,13 @@ namespace GameReviewWebsite.Controllers
 {
     public class AnGamesController : Controller
     {
-        private AnGameContext db = new AnGameContext();
+        private AnGamesContext db = new AnGamesContext();
 
         // GET: AnGames
         public ActionResult Index()
         {
-            return View(db.AnGames.ToList());
+            var anGames = db.AnGames.Include(a => a.Genre);
+            return View(anGames.ToList());
         }
 
         // GET: AnGames/Details/5
@@ -38,6 +39,7 @@ namespace GameReviewWebsite.Controllers
         // GET: AnGames/Create
         public ActionResult Create()
         {
+            ViewBag.GenreId = new SelectList(db.AnGenres, "GenreId", "Name");
             return View();
         }
 
@@ -55,6 +57,7 @@ namespace GameReviewWebsite.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.GenreId = new SelectList(db.AnGenres, "GenreId", "Name", anGame.GenreId);
             return View(anGame);
         }
 
@@ -70,6 +73,7 @@ namespace GameReviewWebsite.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.GenreId = new SelectList(db.AnGenres, "GenreId", "Name", anGame.GenreId);
             return View(anGame);
         }
 
@@ -86,6 +90,7 @@ namespace GameReviewWebsite.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.GenreId = new SelectList(db.AnGenres, "GenreId", "Name", anGame.GenreId);
             return View(anGame);
         }
 

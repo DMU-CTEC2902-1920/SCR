@@ -6,7 +6,7 @@ namespace GameReviewWebsite.Migrations
     using System.Linq;
     using System.Collections.Generic;
     using GameReviewWebsite.Models;
-    internal sealed class Configuration : DbMigrationsConfiguration<GameReviewWebsite.Models.AnDeveloperContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<GameReviewWebsite.Models.AnDevelopersContext>
     {
         public Configuration()
         {
@@ -14,7 +14,7 @@ namespace GameReviewWebsite.Migrations
             ContextKey = "GameReviewWebsite.Models.AnDeveloperContext";
         }
 
-        protected override void Seed(GameReviewWebsite.Models.AnDeveloperContext context)
+        protected override void Seed(GameReviewWebsite.Models.AnDevelopersContext context)
         {
             //  This method will be called after migrating to the latest version.
             var developers = new List<AnDeveloper>

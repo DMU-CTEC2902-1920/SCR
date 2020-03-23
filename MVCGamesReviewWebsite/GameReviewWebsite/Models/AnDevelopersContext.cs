@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GameReviewWebsite.Models
 {
-    public class AnGameContext : DbContext
+    public class AnDevelopersContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,10 +15,10 @@ namespace GameReviewWebsite.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public AnGameContext() : base("name=AnGameContext")
+        public AnDevelopersContext() : base("name=AnDevelopersContext")
         {
         }
 
-        public System.Data.Entity.DbSet<GameReviewWebsite.Models.AnGame> AnGames { get; set; }
+        public System.Data.Entity.DbSet<GameReviewWebsite.Models.AnDeveloper> AnDevelopers { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace GameReviewWebsite.Controllers
 {
     public class AnDevelopersController : Controller
     {
-        private AnDeveloperContext db = new AnDeveloperContext();
+        private AnDevelopersContext db = new AnDevelopersContext();
 
         // GET: AnDevelopers
         public ActionResult Index()

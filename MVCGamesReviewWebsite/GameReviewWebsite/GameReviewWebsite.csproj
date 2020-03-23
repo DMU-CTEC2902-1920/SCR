@@ -182,12 +182,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnDeveloper.cs" />
-    <Compile Include="Models\AnDeveloperContext.cs" />
+    <Compile Include="Models\AnDevelopersContext.cs" />
     <Compile Include="Models\AnGame.cs" />
-    <Compile Include="Models\AnGameContext.cs" />
+    <Compile Include="Models\AnGamesContext.cs" />
     <Compile Include="Models\AnGenre.cs" />
     <Compile Include="Models\AnReview.cs" />
     <Compile Include="Models\AnUser.cs" />
+    <Compile Include="Models\DeveloperGameViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,16 +250,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\AnGames\Create.cshtml" />
-    <Content Include="Views\AnGames\Delete.cshtml" />
-    <Content Include="Views\AnGames\Details.cshtml" />
-    <Content Include="Views\AnGames\Edit.cshtml" />
-    <Content Include="Views\AnGames\Index.cshtml" />
     <Content Include="Views\AnDevelopers\Create.cshtml" />
     <Content Include="Views\AnDevelopers\Delete.cshtml" />
     <Content Include="Views\AnDevelopers\Details.cshtml" />
     <Content Include="Views\AnDevelopers\Edit.cshtml" />
     <Content Include="Views\AnDevelopers\Index.cshtml" />
+    <Content Include="Views\AnGames\Create.cshtml" />
+    <Content Include="Views\AnGames\Delete.cshtml" />
+    <Content Include="Views\AnGames\Details.cshtml" />
+    <Content Include="Views\AnGames\Edit.cshtml" />
+    <Content Include="Views\AnGames\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
