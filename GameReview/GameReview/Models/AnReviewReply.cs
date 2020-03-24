@@ -16,6 +16,6 @@ namespace GameReview.Models
         public virtual AnUser ReviewRepliedBy { get; set; }
         public virtual int ReviewId { get; set; }
         [ForeignKey("ReviewId")]
-        public virtual int ReviewReview { get; set; }
+        public virtual AnReview AnReview { get; set; }
     }
 }

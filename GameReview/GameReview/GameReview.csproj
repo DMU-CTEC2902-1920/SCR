@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnDevelopersController.cs" />
+    <Compile Include="Controllers\AnGamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -177,7 +179,9 @@
     <Compile Include="Models\AnComment.cs" />
     <Compile Include="Models\AnCommentReply.cs" />
     <Compile Include="Models\AnDeveloper.cs" />
+    <Compile Include="Models\AnDeveloperContext.cs" />
     <Compile Include="Models\AnGame.cs" />
+    <Compile Include="Models\AnGameContext.cs" />
     <Compile Include="Models\AnGenre.cs" />
     <Compile Include="Models\AnReview.cs" />
     <Compile Include="Models\AnReviewReply.cs" />
@@ -243,6 +247,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AnGames\Create.cshtml" />
+    <Content Include="Views\AnGames\Delete.cshtml" />
+    <Content Include="Views\AnGames\Details.cshtml" />
+    <Content Include="Views\AnGames\Edit.cshtml" />
+    <Content Include="Views\AnGames\Index.cshtml" />
+    <Content Include="Views\AnDevelopers\Create.cshtml" />
+    <Content Include="Views\AnDevelopers\Delete.cshtml" />
+    <Content Include="Views\AnDevelopers\Details.cshtml" />
+    <Content Include="Views\AnDevelopers\Edit.cshtml" />
+    <Content Include="Views\AnDevelopers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

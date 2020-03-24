@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -22,9 +23,8 @@ namespace GameReview.Models
         public virtual AnGenre Genre { get; set; }
         public virtual int GenreID { get; set; }
 
-
-        public virtual List<AnReview> ListReview { get; set; }
         public virtual int ReviewId { get; set; }
+        public virtual ICollection<AnReview> ListReview { get; set; }
 
         //public virtual List<AnReviewReply> ListReviewReply { get; set; }
         //public virtual int ReviewReplyId { get; set; }
