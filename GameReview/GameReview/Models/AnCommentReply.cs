@@ -13,7 +13,8 @@ namespace GameReview.Models
         public virtual int CommentReplyId { get; set; }
         public virtual string CommentReplyText { get; set; }
         public virtual int UserId { get; set; }
-        public virtual AnUser CommentRepliedBy { get; set; }
+        [ForeignKey("UserId")]
+        public virtual AnUser ReviewRepliedBy { get; set; }
         public virtual int CommentId { get; set; }
         [ForeignKey("CommentId")]
         public virtual  AnComment AnComment { get; set; }
