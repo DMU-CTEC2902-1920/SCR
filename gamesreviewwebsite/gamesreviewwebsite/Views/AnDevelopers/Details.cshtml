@@ -6,37 +6,13 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>AnDeveloper</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+<h1> @Model.Name</h1>
+<p>Description:@Model.Description</p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+<h3>Games Worked On:</h3>
+@foreach (var gameworkedon in @Model.GamesDeveloped)
+{
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GameId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GameId)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DeveloperId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <h3><a href="~/AnGames/Details/@gameworkedon.GameId">Developed @gameworkedon.Name.</a></h3>
+}
