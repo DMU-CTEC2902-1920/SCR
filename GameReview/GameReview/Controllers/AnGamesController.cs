@@ -157,6 +157,9 @@ namespace GameReview.Controllers
 
         }
 
+
+        //Method that allows you to delete a review
+
         // POST: AnGames/DeleteReview
         [HttpPost]
         public ActionResult DeleteReview(int id)
@@ -168,6 +171,8 @@ namespace GameReview.Controllers
 
         }
 
+
+        //Method that allows you to delete a review reply
         // POST: AnGames/DeleteReviewReply
         [HttpPost]
         public ActionResult DeleteReviewReply(int id)

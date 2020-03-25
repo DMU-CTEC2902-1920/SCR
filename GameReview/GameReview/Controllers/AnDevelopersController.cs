@@ -144,6 +144,7 @@ namespace GameReview.Controllers
 
         }
 
+        //action method that allows you to delete a comment 
         // POST: AnGames/DeleteComment
         [HttpPost]
         public ActionResult DeleteComment(int id)
@@ -154,7 +155,7 @@ namespace GameReview.Controllers
             return RedirectToAction("Index");
 
         }
-
+        //action method that allows you to delete a comment reply
         // POST: AnGames/DeleteCommentReply
         [HttpPost]
         public ActionResult DeleteCommentReply(int id)

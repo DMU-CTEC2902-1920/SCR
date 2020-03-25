@@ -7,6 +7,7 @@ namespace GameReview.Models
 {
     public class AnUser
     {
+        //declare as primary key
         [Key]
         public virtual int UserId { get; set; }
 
