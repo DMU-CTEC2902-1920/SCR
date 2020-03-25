@@ -23,7 +23,7 @@ namespace GameReview.Models
         public virtual AnGenre Genre { get; set; }
         public virtual int GenreID { get; set; }
 
-        public virtual int ReviewId { get; set; }
+        public virtual int? ReviewId { get; set; }
         public virtual ICollection<AnReview> ListReview { get; set; }
 
         //public virtual List<AnReviewReply> ListReviewReply { get; set; }

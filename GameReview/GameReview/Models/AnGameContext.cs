@@ -24,5 +24,7 @@ namespace GameReview.Models
         public System.Data.Entity.DbSet<GameReview.Models.AnDeveloper> AnDevelopers { get; set; }
 
         public System.Data.Entity.DbSet<GameReview.Models.AnGenre> AnGenres { get; set; }
+
+        public System.Data.Entity.DbSet<GameReview.Models.AnUser> AnUsers { get; set; }
     }
 }
