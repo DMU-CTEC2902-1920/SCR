@@ -147,7 +147,7 @@ namespace GameReview.Controllers
             AnReview review = new AnReview();
             review.UserId = userid;
             review.ReviewText = AnReview;
-            review.
+            
             db.AnReviews.Add(review);
             db.SaveChanges();
             return RedirectToAction("Index");
