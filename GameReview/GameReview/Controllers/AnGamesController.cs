@@ -20,6 +20,20 @@ namespace GameReview.Controllers
             var anGames = db.AnGames.Include(a => a.DevelopedBy).Include(a => a.Genre);
             return View(anGames.ToList());
         }
+        //error messsage for review text
+        // GET: Error
+        public ActionResult Error()
+        {
+           
+            return View();
+        }
+        //error for score
+        // GET: Error
+        public ActionResult Error2()
+        {
+
+            return View();
+        }
 
         // GET: AnGames/Details/5
         public ActionResult Details(int? id)
@@ -128,10 +142,15 @@ namespace GameReview.Controllers
         [HttpPost]
         public ActionResult PostReviewReply(ReviewReplyViewModel obj)
         {
+
             int userid = 1;
             AnReviewReply reply = new AnReviewReply();
             reply.UserId = userid;
             reply.ReviewReplyText = obj.AnReviewReply;
+            if (reply.ReviewReplyText == null)
+            {
+                return RedirectToAction("Error");
+            }
             reply.ReviewId = obj.AReviewId;
             db.AnReviewReplys.Add(reply);
             db.SaveChanges();
@@ -143,17 +162,40 @@ namespace GameReview.Controllers
         [HttpPost]
         public ActionResult PostReview(string AnReview, string AnReviewScore)
         {
-            int userid = 2;
-            int anreviewscore = Convert.ToInt32(AnReviewScore);
-            AnReview review = new AnReview();
-            review.UserId = userid;
-            review.ReviewText = AnReview;
-            review.ReviewScore = anreviewscore;
+            if(AnReview=="")
+            {
+                return RedirectToAction("Error");
+            }
+            try
+            {
+                int temp;
+                temp=Convert.ToInt32(AnReviewScore);
+
+                if (temp >0 | temp < 11)
+                {
+                    int userid = 2;
+                    int anreviewscore = Convert.ToInt32(AnReviewScore);
+                    AnReview review = new AnReview();
+                    review.UserId = userid;
+                    review.ReviewText = AnReview;
+                    review.ReviewScore = anreviewscore;
+
+
+                    db.AnReviews.Add(review);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Error2");
+                }
+                
+            }
+            catch
+            {
+                return RedirectToAction("Error2");
+            }
             
-            
-            db.AnReviews.Add(review);
-            db.SaveChanges();
-            return RedirectToAction("Index");
 
         }
 

@@ -12,6 +12,7 @@ namespace GameReview.Models
         //declare as primary key
         [Key]
         public virtual int CommentReplyId { get; set; }
+        [Required]
         public virtual string CommentReplyText { get; set; }
         //declare user as a foreign key
         public virtual int? UserId { get; set; }

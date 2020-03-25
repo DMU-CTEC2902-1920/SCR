@@ -12,6 +12,7 @@ namespace GameReview.Models
         //declare comment as primary key
         [Key]
         public virtual int CommentId { get; set; }
+        [Required]
         public virtual string CommentText { get; set; }
         public virtual int UserId { get; set; }
         

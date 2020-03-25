@@ -199,6 +199,10 @@
     <Compile Include="Migrations\202003251518250_addedreviewscoretoanreview.Designer.cs">
       <DependentUpon>202003251518250_addedreviewscoretoanreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003251712422_addedvalidaiton.cs" />
+    <Compile Include="Migrations\202003251712422_addedvalidaiton.Designer.cs">
+      <DependentUpon>202003251712422_addedvalidaiton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnComment.cs" />
@@ -286,6 +290,9 @@
     <Content Include="Views\AnDevelopers\Details.cshtml" />
     <Content Include="Views\AnDevelopers\Edit.cshtml" />
     <Content Include="Views\AnDevelopers\Index.cshtml" />
+    <Content Include="Views\AnGames\Error.cshtml" />
+    <Content Include="Views\AnGames\Error2.cshtml" />
+    <Content Include="Views\AnDevelopers\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -321,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003251518250_addedreviewscoretoanreview.resx">
       <DependentUpon>202003251518250_addedreviewscoretoanreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003251712422_addedvalidaiton.resx">
+      <DependentUpon>202003251712422_addedvalidaiton.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
