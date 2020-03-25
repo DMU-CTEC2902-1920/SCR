@@ -20,6 +20,13 @@
     <h2>Score:@gameworkedon.Score</h2>
 
 }
+<p>Leave A comment?</p>
+@using (Html.BeginForm("PostComment", "AnDevelopers", FormMethod.Post))
+{
+    <input type="text" name="AnComment" style="width:100%" ; height:100px />
+    <input type="submit" value="Post Comment" class="btn btn-default">
+
+}
 <h3>Comments:</h3>
 @foreach (var comment in @Model.ListComment)
 {
@@ -30,5 +37,13 @@
         <li>Reply:</li>
         <li>@commentreply.ReviewRepliedBy.Email</li>
         <li>@commentreply.CommentReplyText</li>
+    }
+    using (Html.BeginForm("PostCommentReply", "AnDevelopers", FormMethod.Post))
+    {
+        <input type="text" name="AnCommentReply" style="width:100%" ; height:100px />
+        <input type="hidden" name="ACommentId" value="@comment.CommentId" />
+
+        <input type="submit" value="Post Reply" class="btn btn-default">
+
     }
 }
