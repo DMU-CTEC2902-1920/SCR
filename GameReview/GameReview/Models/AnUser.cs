@@ -11,7 +11,7 @@ namespace GameReview.Models
         public virtual int UserId { get; set; }
 
         public virtual string Password { get; set; }
-
+        [EmailAddress]
         public virtual string Email { get; set; }
     }
 }

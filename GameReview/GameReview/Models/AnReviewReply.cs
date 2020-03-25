@@ -11,6 +11,7 @@ namespace GameReview.Models
     {
         [Key]
         public virtual int ReviewReplyId { get; set; }
+        [Required]
         public virtual string ReviewReplyText { get; set; }
         public virtual int? UserId { get; set; }
         [ForeignKey("UserId")]

@@ -11,7 +11,10 @@ namespace GameReview.Models
     {
         [Key]
         public virtual int ReviewId { get; set; }
+        [Required]
         public virtual string ReviewText { get; set; }
+        [Range(1,10)]
+        [Required]
         public virtual int ReviewScore { get; set; }
         public virtual int UserId { get; set; }
 
