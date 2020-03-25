@@ -6,37 +6,29 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>AnDeveloper</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+<h1> @Model.Name</h1>
+<p>Description:@Model.Description</p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+<h3>Games Worked On:</h3>
+@foreach (var gameworkedon in @Model.GamesDeveloped)
+{
+    <h3><a href="~/AnGames/Details/@gameworkedon.GameId">Developed @gameworkedon.Name.</a></h3>
+    <img src="@gameworkedon.ImgSrc" alt="@gameworkedon.Name">
+    <h2>ReleaseDate:@gameworkedon.ReleaseDate</h2>
+    <h2>Genre:@gameworkedon.Genre.Name</h2>
+    <h2>Score:@gameworkedon.Score</h2>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GameId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GameId)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DeveloperId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+}
+<h3>Comments:</h3>
+@foreach (var comment in @Model.ListComment)
+{
+    <li> @comment.AnUser.Email</li>
+    <li> @comment.CommentText</li>
+    foreach (var commentreply in comment.CommentReplies)
+    {
+        <li>Reply:</li>
+        <li>@commentreply.ReviewRepliedBy.Email</li>
+        <li>@commentreply.CommentReplyText</li>
+    }
+}

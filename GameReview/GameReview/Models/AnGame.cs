@@ -17,7 +17,8 @@ namespace GameReview.Models
         public virtual string Platform { get; set; }
         public string ImgSrc { get; set; }
         public virtual decimal Price { get; set; }
-
+        public virtual decimal Score { get; set; }
+        public virtual string ReleaseDate { get; set; }
         public virtual AnDeveloper DevelopedBy { get; set; }
         public virtual int DeveloperId { get; set; }
         public virtual AnGenre Genre { get; set; }

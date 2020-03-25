@@ -12,9 +12,9 @@
         <li>
             <a href="~/AnGames/Details/@game.GameId">@game.Name</a>
             <img src="@game.ImgSrc" alt="@game.Genre.Name">
-            @if (game.ListReview.Count == 2)
+            @if (game.Score>7)
             {
-                <text>Multiple Reviews!</text>
+                <text>Popular Right Now!</text>
             }
 
         </li>

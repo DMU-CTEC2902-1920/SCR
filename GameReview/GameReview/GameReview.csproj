@@ -187,6 +187,10 @@
     <Compile Include="Migrations\202003250111147_angamereviewidedited.Designer.cs">
       <DependentUpon>202003250111147_angamereviewidedited.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003250223148_addedscoredatetogame.cs" />
+    <Compile Include="Migrations\202003250223148_addedscoredatetogame.Designer.cs">
+      <DependentUpon>202003250223148_addedscoredatetogame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnComment.cs" />
@@ -298,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003250111147_angamereviewidedited.resx">
       <DependentUpon>202003250111147_angamereviewidedited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003250223148_addedscoredatetogame.resx">
+      <DependentUpon>202003250223148_addedscoredatetogame.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

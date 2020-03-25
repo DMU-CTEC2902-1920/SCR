@@ -13,6 +13,8 @@
 <p>Genre:<strong>@Model.Genre.Name</strong></p>
 <p>Genre:Description<strong>@Model.Genre.Description</strong></p>
 <p>Price:£<strong>@Model.Price</strong></p>
+<p>ReleaseDate:<strong>@Model.ReleaseDate</strong></p>
+<p>Score:<strong>@Model.Score</strong></p>
 
 <h3>Reviews:</h3>
 @foreach (var review in @Model.ListReview)
@@ -21,6 +23,7 @@
     <li> @review.ReviewText</li>
     foreach (var reviewreply in review.ReviewReplies)
     {
+        <li>Reply:</li>
         <li>@reviewreply.ReviewRepliedBy.Email</li>
         <li>@reviewreply.ReviewReplyText</li>
     }
