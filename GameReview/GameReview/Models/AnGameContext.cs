@@ -29,5 +29,7 @@ namespace GameReview.Models
 
         public System.Data.Entity.DbSet<GameReview.Models.AnReview> AnReviews { get; set; }
         public System.Data.Entity.DbSet<GameReview.Models.AnReviewReply> AnReviewReplys { get; set; }
+        public System.Data.Entity.DbSet<GameReview.Models.AnComment> AnComment { get; set; }
+        public System.Data.Entity.DbSet<GameReview.Models.AnCommentReply> AnCommentReplys { get; set; }
     }
 }

@@ -115,6 +115,21 @@ namespace GameReview.Controllers
             return RedirectToAction("Index");
         }
 
+        // POST: AnDevelopers/PostCommentReply
+        [HttpPost]
+        public ActionResult PostCommentReply(CommentReplyViewModel obj)
+        {
+            int userid = 1;
+            AnCommentReply reply = new AnCommentReply();
+            reply.UserId = userid;
+            reply.CommentReplyText = obj.AnCommentReply;
+            reply.CommentId = obj.ACommentId;
+            db.AnCommentReplys.Add(reply);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -203,6 +203,7 @@
     <Compile Include="Models\AnReview.cs" />
     <Compile Include="Models\AnReviewReply.cs" />
     <Compile Include="Models\AnUser.cs" />
+    <Compile Include="Models\CommentReplyViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ReviewReplyViewModel.cs" />

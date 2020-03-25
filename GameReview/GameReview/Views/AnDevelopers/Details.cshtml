@@ -31,4 +31,12 @@
         <li>@commentreply.ReviewRepliedBy.Email</li>
         <li>@commentreply.CommentReplyText</li>
     }
+    using (Html.BeginForm("PostCommentReply", "AnDevelopers", FormMethod.Post))
+    {
+        <input type="text" name="AnCommentReply" style="width:100%" ; height:100px />
+        <input type="hidden" name="ACommentId" value="@comment.CommentId" />
+
+        <input type="submit" value="Post Reply" class="btn btn-default">
+
+    }
 }
