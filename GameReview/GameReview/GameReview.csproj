@@ -195,6 +195,10 @@
     <Compile Include="Migrations\202003251302042_updatemodel.Designer.cs">
       <DependentUpon>202003251302042_updatemodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003251518250_addedreviewscoretoanreview.cs" />
+    <Compile Include="Migrations\202003251518250_addedreviewscoretoanreview.Designer.cs">
+      <DependentUpon>202003251518250_addedreviewscoretoanreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnComment.cs" />
@@ -314,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003251302042_updatemodel.resx">
       <DependentUpon>202003251302042_updatemodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003251518250_addedreviewscoretoanreview.resx">
+      <DependentUpon>202003251518250_addedreviewscoretoanreview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
