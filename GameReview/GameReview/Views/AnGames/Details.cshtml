@@ -27,4 +27,13 @@
         <li>@reviewreply.ReviewRepliedBy.Email</li>
         <li>@reviewreply.ReviewReplyText</li>
     }
+    using (Html.BeginForm("PostReviewReply", "AnGames", FormMethod.Post))
+    {
+        <input type="text" name="AnReviewReply" style="width:100%" ; height:100px />
+        <input type="hidden" name="AReviewId" value="@review.ReviewId" />
+        
+        <input type="submit" value="Post Reply" class="btn btn-default">
+
+    }
+
 }

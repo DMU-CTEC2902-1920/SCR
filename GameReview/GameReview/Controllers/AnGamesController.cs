@@ -124,6 +124,20 @@ namespace GameReview.Controllers
             return RedirectToAction("Index");
         }
 
+        // POST: AnGames/PostReviewReply
+        [HttpPost]
+        public ActionResult PostReviewReply(ReviewReplyViewModel obj)
+        {
+            int userid = 1;
+            AnReviewReply reply = new AnReviewReply();
+            reply.UserId = userid;
+            reply.ReviewReplyText = obj.AnReviewReply;
+            reply.ReviewId = obj.AReviewId;
+            db.AnReviewReplys.Add(reply);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
