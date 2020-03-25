@@ -27,16 +27,29 @@
     <input type="submit" value="Post Comment" class="btn btn-default">
 
 }
+
 <h3>Comments:</h3>
 @foreach (var comment in @Model.ListComment)
 {
     <li> @comment.AnUser.Email</li>
     <li> @comment.CommentText</li>
+    using (Html.BeginForm("DeleteComment", "AnDevelopers", new { id = comment.CommentId }))
+    {
+
+        <input type="submit" value="DeleteComment" class="btn btn-default">
+
+    }
     foreach (var commentreply in comment.CommentReplies)
     {
         <li>Reply:</li>
         <li>@commentreply.ReviewRepliedBy.Email</li>
         <li>@commentreply.CommentReplyText</li>
+        using (Html.BeginForm("DeleteCommentReply", "AnDevelopers", new { id = commentreply.CommentReplyId }))
+        {
+
+            <input type="submit" value="DeleteCommentReply" class="btn btn-default">
+
+        }
     }
     using (Html.BeginForm("PostCommentReply", "AnDevelopers", FormMethod.Post))
     {

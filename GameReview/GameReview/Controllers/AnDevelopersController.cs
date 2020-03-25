@@ -144,6 +144,28 @@ namespace GameReview.Controllers
 
         }
 
+        // POST: AnGames/DeleteComment
+        [HttpPost]
+        public ActionResult DeleteComment(int id)
+        {
+            AnComment anComment = db.AnComments.Find(id);
+            db.AnComments.Remove(anComment);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        // POST: AnGames/DeleteCommentReply
+        [HttpPost]
+        public ActionResult DeleteCommentReply(int id)
+        {
+            AnCommentReply anCommentReply = db.AnCommentReplys.Find(id);
+            db.AnCommentReplys.Remove(anCommentReply);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
