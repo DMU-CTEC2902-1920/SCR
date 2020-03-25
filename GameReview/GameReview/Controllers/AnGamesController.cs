@@ -141,12 +141,15 @@ namespace GameReview.Controllers
 
         // POST: AnGames/PostReview
         [HttpPost]
-        public ActionResult PostReview(string AnReview)
+        public ActionResult PostReview(string AnReview, string AnReviewScore)
         {
             int userid = 2;
+            int anreviewscore = Convert.ToInt32(AnReviewScore);
             AnReview review = new AnReview();
             review.UserId = userid;
             review.ReviewText = AnReview;
+            review.ReviewScore = anreviewscore;
+            
             
             db.AnReviews.Add(review);
             db.SaveChanges();
