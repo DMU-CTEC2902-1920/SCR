@@ -141,14 +141,39 @@ namespace GameReview.Controllers
 
         // POST: AnGames/PostReview
         [HttpPost]
-        public ActionResult PostReview(string AnReview)
+        public ActionResult PostReview(string AnReview, string AnReviewScore)
         {
             int userid = 2;
+            int anreviewscore = Convert.ToInt32(AnReviewScore);
             AnReview review = new AnReview();
             review.UserId = userid;
             review.ReviewText = AnReview;
+            review.ReviewScore = anreviewscore;
+            
             
             db.AnReviews.Add(review);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        // POST: AnGames/DeleteReview
+        [HttpPost]
+        public ActionResult DeleteReview(int id)
+        {
+            AnReview anReview = db.AnReviews.Find(id);
+            db.AnReviews.Remove(anReview);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        // POST: AnGames/DeleteReviewReply
+        [HttpPost]
+        public ActionResult DeleteReviewReply(int id)
+        {
+            AnReviewReply anReviewReply = db.AnReviewReplys.Find(id);
+            db.AnReviewReplys.Remove(anReviewReply);
             db.SaveChanges();
             return RedirectToAction("Index");
 

@@ -7,7 +7,8 @@ using System.Web;
 
 namespace GameReview.Models
 {
-    public class AnGame
+    public class 
+        AnGame
     {
         [Key]
         public virtual int GameId { get; set; }
