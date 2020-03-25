@@ -1,0 +1,30 @@
+﻿@model GameReview.Models.AnGame
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h1> @Model.Name</h1>
+<img src="@Model.ImgSrc" alt="@Model.Name">
+<h2><a href="~/AnDevelopers/Details/@Model.DevelopedBy.DeveloperId">Made by @Model.DevelopedBy.Name</a></h2>
+<h3>Platform:@Model.Platform</h3>
+<p>Description:@Model.Description</p>
+<p>Genre:<strong>@Model.Genre.Name</strong></p>
+<p>Genre:Description<strong>@Model.Genre.Description</strong></p>
+<p>Price:£<strong>@Model.Price</strong></p>
+<p>ReleaseDate:<strong>@Model.ReleaseDate</strong></p>
+<p>Score:<strong>@Model.Score</strong></p>
+
+<h3>Reviews:</h3>
+@foreach (var review in @Model.ListReview)
+{
+    <li> @review.AnUser.Email</li>
+    <li> @review.ReviewText</li>
+    foreach (var reviewreply in review.ReviewReplies)
+    {
+        <li>Reply:</li>
+        <li>@reviewreply.ReviewRepliedBy.Email</li>
+        <li>@reviewreply.ReviewReplyText</li>
+    }
+}
