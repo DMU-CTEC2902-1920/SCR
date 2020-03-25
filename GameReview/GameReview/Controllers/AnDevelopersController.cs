@@ -20,6 +20,14 @@ namespace GameReview.Controllers
             return View(db.AnDevelopers.ToList());
         }
 
+        //error messsage for review text
+        // GET: Error
+        public ActionResult Error()
+        {
+
+            return View();
+        }
+
         // GET: AnDevelopers/Details/5
         public ActionResult Details(int? id)
         {
@@ -119,10 +127,15 @@ namespace GameReview.Controllers
         [HttpPost]
         public ActionResult PostCommentReply(CommentReplyViewModel obj)
         {
+            
             int userid = 1;
             AnCommentReply reply = new AnCommentReply();
             reply.UserId = userid;
             reply.CommentReplyText = obj.AnCommentReply;
+            if (reply.CommentReplyText == null)
+            {
+                return RedirectToAction("Error");
+            }
             reply.CommentId = obj.ACommentId;
             db.AnCommentReplys.Add(reply);
             db.SaveChanges();
@@ -134,6 +147,10 @@ namespace GameReview.Controllers
         [HttpPost]
         public ActionResult PostComment(string AnComment)
         {
+            if (AnComment == "")
+            {
+                return RedirectToAction("Error");
+            }
             int userid = 2;
             AnComment comment = new AnComment();
             comment.UserId = userid;
