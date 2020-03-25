@@ -138,6 +138,21 @@ namespace GameReview.Controllers
             return RedirectToAction("Index");
 
         }
+
+        // POST: AnGames/PostReview
+        [HttpPost]
+        public ActionResult PostReview(string AnReview)
+        {
+            int userid = 2;
+            AnReview review = new AnReview();
+            review.UserId = userid;
+            review.ReviewText = AnReview;
+            review.
+            db.AnReviews.Add(review);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
