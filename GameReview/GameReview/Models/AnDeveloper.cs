@@ -15,5 +15,7 @@ namespace GameReview.Models
         public virtual string Description { get; set; }
         public virtual int GameId { get; set; }
         public virtual List<AnGame> GamesDeveloped { get; set; }
+        public virtual int CommentId { get; set; }
+        public virtual ICollection<AnComment> ListComment { get; set; }
     }
 }

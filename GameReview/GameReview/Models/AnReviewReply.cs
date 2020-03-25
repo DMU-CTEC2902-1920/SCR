@@ -12,7 +12,7 @@ namespace GameReview.Models
         [Key]
         public virtual int ReviewReplyId { get; set; }
         public virtual string ReviewReplyText { get; set; }
-        public virtual int UserId { get; set; }
+        public virtual int? UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual AnUser ReviewRepliedBy { get; set; }
         public virtual int ReviewId { get; set; }

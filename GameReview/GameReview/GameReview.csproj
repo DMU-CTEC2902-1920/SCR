@@ -175,6 +175,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003250001336_modelchanges.cs" />
+    <Compile Include="Migrations\202003250001336_modelchanges.Designer.cs">
+      <DependentUpon>202003250001336_modelchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003250010578_addedcommentstodeveloper.cs" />
+    <Compile Include="Migrations\202003250010578_addedcommentstodeveloper.Designer.cs">
+      <DependentUpon>202003250010578_addedcommentstodeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnComment.cs" />
     <Compile Include="Models\AnCommentReply.cs" />
@@ -273,6 +282,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202003250001336_modelchanges.resx">
+      <DependentUpon>202003250001336_modelchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003250010578_addedcommentstodeveloper.resx">
+      <DependentUpon>202003250010578_addedcommentstodeveloper.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
