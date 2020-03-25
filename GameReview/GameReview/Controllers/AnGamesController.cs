@@ -153,6 +153,28 @@ namespace GameReview.Controllers
             return RedirectToAction("Index");
 
         }
+
+        // POST: AnGames/DeleteReview
+        [HttpPost]
+        public ActionResult DeleteReview(int id)
+        {
+            AnReview anReview = db.AnReviews.Find(id);
+            db.AnReviews.Remove(anReview);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        // POST: AnGames/DeleteReviewReply
+        [HttpPost]
+        public ActionResult DeleteReviewReply(int id)
+        {
+            AnReviewReply anReviewReply = db.AnReviewReplys.Find(id);
+            db.AnReviewReplys.Remove(anReviewReply);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
