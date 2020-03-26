@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 align="center">Welcome to our Game Review Page</h1>
+<img src="@Url.Content("/content/mvc.jpg")" width="1200" height="250" />
+
+
+<p>Thanks for visiting our website here are some of the games you will be able to view in this website and provide your individual opinion on the hottest games out.
+    Also dont forget to register and login to our website to access a lot more. Please view the images below as a teaser for whats more to come. If you love games this is the site for you.</p>
+<h2 align="center">Games Available </h2>
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="@Url.Content("/content/mine.jpg")" width="250" height="100" />
+        </li>
+        <br/>
+        <li>
+            <img src="@Url.Content("/content/rust1.jpg")" width="250" height="100" />
+        </li>
+    </ul>
+</div>
