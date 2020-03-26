@@ -223,6 +223,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AnGameContext-20200324232955.mdf" />
+    <Content Include="App_Data\AnGameContext-20200324232955_log.ldf">
+      <DependentUpon>AnGameContext-20200324232955.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -294,9 +298,7 @@
     <Content Include="Views\AnGames\Error2.cshtml" />
     <Content Include="Views\AnDevelopers\Error.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

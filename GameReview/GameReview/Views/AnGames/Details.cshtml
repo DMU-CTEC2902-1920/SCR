@@ -4,28 +4,55 @@
     ViewBag.Title = "Details";
 }
 
-<h2>A Game Page!</h2>
-<h1> @Model.Name</h1>
-<img src="@Model.ImgSrc" alt="@Model.Name">
-<h2><a href="~/AnDevelopers/Details/@Model.DevelopedBy.DeveloperId">Made by @Model.DevelopedBy.Name</a></h2>
-<h3>Platform:@Model.Platform</h3>
-<p>Description:@Model.Description</p>
-<p>Genre:<strong>@Model.Genre.Name</strong></p>
-<p>Genre:Description<strong>@Model.Genre.Description</strong></p>
-<p>Price:£<strong>@Model.Price</strong></p>
-<p>ReleaseDate:<strong>@Model.ReleaseDate</strong></p>
-<p>Score:<strong>@Model.Score</strong></p>
-<p>Leave A review?</p>
+
+<h1><u> @Model.Name</u></h1>
+<img src="@Model.ImgSrc" alt="@Model.Name" align="right">
+<br />
 @using (Html.BeginForm("PostReview", "AnGames", FormMethod.Post))
 {
+    <p>Leave A review?</p>
     <input type="text" name="AnReview" style="width:100%" ; height:100px />
     <p>ReviewScore:</p>
     <input type="text" name="AnReviewScore" style="width:100%" ; height:100px />
+
+    <br />
     <input type="submit" value="Post Review" class="btn btn-default">
 
 }
+<br />
 
-<h3>Reviews:</h3>
+<h2><a href="~/AnDevelopers/Details/@Model.DevelopedBy.DeveloperId">Made by @Model.DevelopedBy.Name</a></h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Platform</th>
+        <th>Description</th>
+        <th>Genre</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>ReleaseDate</th>
+        <th>Score</th>
+    </tr>
+
+    <tr>
+        <td>@Model.Platform</td>
+        <td>@Model.Description</td>
+        <td>@Model.Genre.Name</td>
+        <td>@Model.Genre.Description</td>
+        <td>£@Model.Price</td>
+        <td>@Model.ReleaseDate</td>
+        <td>@Model.Score</td>
+
+    </tr>
+
+
+</table>
+
+
+
+
+
+<h3><u>Reviews:</u></h3>
 @foreach (var review in @Model.ListReview)
 {
     <li> @review.AnUser.Email</li>
@@ -39,7 +66,9 @@
     foreach (var reviewreply in review.ReviewReplies)
     {
         <li>Reply:</li>
-        <li>@reviewreply.ReviewRepliedBy.Email</li>
+
+        <li>border-bottom: 1px solid purple; @reviewreply.ReviewRepliedBy.Email</li>
+
         <li>@reviewreply.ReviewReplyText</li>
         using (Html.BeginForm("DeleteReviewReply", "AnGames", new { id = reviewreply.ReviewReplyId }))
         {
@@ -51,9 +80,10 @@
     using (Html.BeginForm("PostReviewReply", "AnGames", FormMethod.Post))
     {
         <input type="text" name="AnReviewReply" style="width:100%" ; height:100px />
-        <input type="hidden" name="AReviewId" value="@review.ReviewId" />
+        <input type="hidden" name="AReviewId" value="@review.ReviewId" /> <input type="submit" value="Post Reply" class="btn btn-default">
+        <br />
 
-        <input type="submit" value="Post Reply" class="btn btn-default">
 
     }
+
 }
