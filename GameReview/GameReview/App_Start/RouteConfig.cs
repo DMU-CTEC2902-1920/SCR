@@ -16,7 +16,7 @@ namespace GameReview
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AnGames", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Homepage", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
