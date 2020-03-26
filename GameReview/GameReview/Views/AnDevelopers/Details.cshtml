@@ -4,20 +4,39 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
 
-<h1> @Model.Name</h1>
-<p>Description:@Model.Description</p>
-
-<h3>Games Worked On:</h3>
 @foreach (var gameworkedon in @Model.GamesDeveloped)
+
+
 {
+
+    <img src="@gameworkedon.ImgSrc" alt="@gameworkedon.Name" align="right">
+
+    <h2><u>Developer Details</u></h2>
+    <h1> @Model.Name: @Model.Description</h1>
+
+
+
+    <h3>Games Worked On:</h3>
     <h3><a href="~/AnGames/Details/@gameworkedon.GameId">Developed @gameworkedon.Name.</a></h3>
-    <img src="@gameworkedon.ImgSrc" alt="@gameworkedon.Name">
-    <h2>ReleaseDate:@gameworkedon.ReleaseDate</h2>
-    <h2>Genre:@gameworkedon.Genre.Name</h2>
-    <h2>Score:@gameworkedon.Score</h2>
+
+
+    <table class="table table-striped">
+        <tr>
+            <th>ReleaseDate</th>
+            <th>Genre</th>
+            <th>Score</th>
+
+        </tr>
+
+        <tr>
+            <td>@gameworkedon.ReleaseDate</td>
+            <td>@gameworkedon.Genre.Name</td>
+            <td>@gameworkedon.Score</td>
+        </tr>
+    </table>
+
 
 }
 <p>Leave A comment?</p>

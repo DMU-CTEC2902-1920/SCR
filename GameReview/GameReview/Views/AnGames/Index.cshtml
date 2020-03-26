@@ -4,23 +4,33 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<ul>
-    @foreach (var game in @Model)
-    {
-        <li>
-            <a href="~/AnGames/Details/@game.GameId">@game.Name</a>
-            <img src="@game.ImgSrc" alt="@game.Genre.Name">
-            @if (game.Score>7)
+<h2>Games Index</h2>
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped">
+            <tr>
+                <th>Game Id</th>
+                <th>Name</th>
+                <th>Game Cover</th>
+                <th>Release Date</th>
+                <th>Genre</th>
+                <th> Score</th>
+            </tr>
+            @foreach (var game in @Model)
             {
-                <text>Popular Right Now!</text>
+            <tr>
+                <td>@game.GameId</td>
+                <td>@game.Name</td>
+                <td>  <a href="~/AnGames/Details/@game.GameId"> <img src="@game.ImgSrc" alt="@game.Genre.Name" height=100 width=100></a></td>
+                <td>@game.ReleaseDate</td>
+                <td>@game.Genre.Name</td>
+                <td>@game.Score</td>
+
+            </tr>
             }
+            <tr class="table-info"></tr>
+        </table>
 
-        </li>
-    }
 
-    
-
-   
-</ul>
+    </div>
+</div>
